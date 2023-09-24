@@ -1,0 +1,344 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0c7398;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #ADABAB;
+}
+
+p {
+  z-index: 2;
+}
+
+p > span {
+  font-family: 'Permanent Marker', cursive;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  position: relative;
+  height: 620px;
+}
+
+.base__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 600px;
+  max-width: 330px;
+  background-color: #0c7398;
+  border: 3px outset #7EC6DD;
+  margin: 50px auto;
+  border-radius: 20px;
+  z-index: 1;
+}
+
+.base__container::after {
+  content: '';
+  height: 100px;
+  width: 330px;
+  border-radius: 50%;
+  background-color: #0c7398;
+  z-index: 0;
+  border-bottom-left-radius: 40%;
+  border-bottom-right-radius: 40%;
+  position: relative;
+  bottom: -6px;
+  box-shadow: 3px 12px 10px #151515;
+}
+
+/* Display section */
+
+.display__container {
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  height: 230px;
+  background-color: #3D3D3D;
+  margin: 20px 20px 0 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 7px;
+  text-align: center;
+  z-index: 1;
+  border-bottom-right-radius: 7px;
+}
+
+.display__container::after {
+  content: '';
+  height: 30px;
+  width: 280px;
+  background-color: #3D3D3D;
+  border-bottom: 2px solid black;
+  border-radius: 50%;
+  position: absolute;
+  top: 237px;
+}
+
+.status__content {
+  padding: 50px 0 0 10px;
+}
+
+.display__content {
+  display: flex;
+  height: 70%;
+  margin-bottom: 15px;
+}
+
+.status {
+  background-color: red;
+  width: 5px;
+  height: 5px;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+.display {
+  border: 2px solid black;
+  border-top: 5px solid black;
+  box-sizing: border-box;
+  background-image: linear-gradient(#151515, #2a2a2a, #151515);
+  height: 100%;
+  width: 190px;
+  margin: 20px 40px 40px 3px;
+  border-radius: 5px;
+}
+
+/* Command base section */
+
+#nintendo__logo {
+  margin-top: 40px;
+  padding: 2px 5px;
+  opacity: 0.2;
+  color: black;
+  border: 2px ridge black;
+  border-radius: 10px;
+}
+
+.commands__container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.direction-outside__buttons {
+  background: #0e1111;
+  height: 100px;
+  position: relative;
+  width: 40px;
+  margin: 20px 40px;
+  border-radius: 5px;
+}
+
+.direction-outside__buttons::after {
+  background: #0e1111;
+  content: "";
+  height: 40px;
+  right: -30px;
+  position: absolute;
+  top: 30px;
+  width: 100px;
+  border-radius: 5px;
+}
+
+.direction__buttons {
+  background: #2a2a2a;
+  height: 90px;
+  position: relative;
+  width: 30px;
+  margin: 5px;
+  z-index: 3;
+  border-top: 1px inset rgba(248,248,255, 0.3);
+  border-bottom: 1px inset rgba(248,248,255, 0.075);
+}
+
+.direction__buttons::after {
+  background: #2a2a2a;
+  content: "";
+  height: 30px;
+  right: -30px;
+  position: absolute;
+  top: 30px;
+  width: 90px;
+  border-left: 1px inset rgba(248,248,255, 0.2);
+  border-right: 1px inset rgba(248,248,255, 0.075);
+}
+
+.x-arrows {
+  position: absolute;
+  top: 35px;
+  z-index: 5;
+}
+
+.y-arrows {
+  z-index: 5;
+}
+
+#left-arrow {
+  position: absolute;
+  right: 5px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-right: 20px solid #151515;
+  border-bottom: 10px solid transparent;
+}
+
+#right-arrow {
+  position: absolute;
+  left: 35px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-left: 20px solid #151515;
+  border-bottom: 10px solid transparent;
+}
+
+#top-arrow {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-bottom: 20px solid #151515;
+  border-right: 10px solid transparent;
+}
+
+#bottom-arrow {
+  position: absolute;
+  left: 5px;
+  bottom: 5px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-top: 20px solid #151515;
+  border-right: 10px solid transparent;
+}
+
+#central-circle {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 35px;
+  left: 5px;
+  z-index: 5;
+  border-radius: 50%;
+  background-image: radial-gradient(#151515, #2a2a2a);
+}
+
+.confirmation__buttons {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-right: 40px;
+  position: relative;
+  top: 20px;
+  z-index: 5;
+  color: #3b444b;
+}
+
+#a__button {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #2a2a2a;
+  border-radius: 50%;
+  background-color: #151515;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 50px;
+}
+
+#b__button {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #2a2a2a;
+  border-radius: 50%;
+  background-color: #151515;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 55px;
+  left: 0;
+}
+
+/* Default buttons section */
+
+.buttons {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  height: 30px;
+  width: 100px;
+}
+
+.default__button {
+  height: 10px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: #151515;
+}
+
+.buttons__label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 30px;
+  width: 100px;
+  opacity: 0.5;
+}
+
+/* Speaker section */
+
+.speaker__container {
+  align-self: flex-end;
+  width: 50px;
+  height: 50px;
+  z-index: 10;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  transform: rotate(264deg)
+}
+
+.speaker {
+  width: 5px;
+  height: 5px;
+  background-color: #151515;
+  border-radius: 50%;
+  box-shadow:
+  /* first line */
+  7px 0 #2a2a2a, 14px 0 #151515, 21px 0 #2a2a2a, 28px 0 #151515, 35px 0 #2a2a2a,
+  /* second line */
+  -7px 7px #151515, 0 7px #2a2a2a, 7px 7px #151515,
+  14px 7px #2a2a2a, 21px 7px #151515, 28px 7px #2a2a2a,
+  35px 7px #151515, 42px 7px #2a2a2a,
+  /* third line */
+  -7px 14px #151515, 0 14px #2a2a2a, 7px 14px #151515,
+  14px 14px #2a2a2a, 21px 14px #151515, 28px 14px #2a2a2a,
+  35px 14px #151515, 42px 14px #2a2a2a,
+  /* fourth line */
+  -7px 21px #2a2a2a, 0 21px #151515, 7px 21px #2a2a2a,
+  14px 21px #151515, 21px 21px #2a2a2a, 28px 21px #151515,
+  35px 21px #2a2a2a, 42px 21px #151515,
+  /* fifth line */
+  -7px 28px #151515, 0 28px #2a2a2a, 7px 28px #151515,
+  14px 28px #2a2a2a, 21px 28px #151515, 28px 28px #2a2a2a,
+  35px 28px #151515, 42px 28px #2a2a2a,
+  /* sixth line */
+  -7px 35px #2a2a2a, 0 35px #151515, 7px 35px #2a2a2a,
+  14px 35px #151515, 21px 35px #2a2a2a, 28px 35px #151515,
+  35px 35px #2a2a2a, 42px 35px #151515,
+  /* seventh line */
+  -7px 42px #151515, 0 42px #2a2a2a, 7px 42px #151515,
+  14px 42px #2a2a2a, 21px 42px #151515, 28px 42px #2a2a2a,
+  35px 42px #151515, 42px 42px #2a2a2a,
+  /* eighth line */
+  0px 49px #2a2a2a, 7px 49px #151515, 14px 49px #2a2a2a,
+  21px 49px #151515, 28px 49px #2a2a2a, 35px 49px #151515;
+}
